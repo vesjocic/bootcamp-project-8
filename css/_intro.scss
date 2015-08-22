@@ -1,0 +1,21 @@
+// intro section styles
+
+.sectionIntro {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255,255,255,0.9);
+  // background: $palmas90;
+}
+
+.svgIntroText-name {
+  animation: fadeInNames 4s ease;
+}
+
+.svgIntroText-nav {
+  animation: fadeInNav 5s ease;
+}
+
+// end of intro section styles

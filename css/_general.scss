@@ -1,0 +1,25 @@
+// general styles
+
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background: white;
+  background-image: url(../images/bg-grid.png);
+  background-attachment: fixed;      
+}
+
+section {
+	width: 100%;
+}
+
+.wrapperOuter {
+	max-width: 1000px;
+	width: 75%;
+	margin: 0 auto;
+}
+
+// end of general styles

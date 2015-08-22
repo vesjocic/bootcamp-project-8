@@ -1,0 +1,47 @@
+// header styles
+
+// h1 {
+//   font-family: 'Montserrat', sans-serif;
+//   font-size: 6rem;
+//   font-weight: 400;
+//   letter-spacing: 2px;
+//   text-transform: uppercase;
+//   color: $tradewind;
+//   margin: 0;
+//   padding: 0;
+// }
+
+// paragraph styles
+
+/*p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  color: rgba(76,76,76,1); 
+}*/
+
+// link styles
+
+a {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: rgba(76,76,76,1);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgba(110,183,158,1);
+}
+
+.link {
+  fill: #4C4C4C;
+}
+.link:hover {
+  fill: #6EB79E;
+  transition: fill 0.2s ease;
+}
+
+// end of typography styles
