@@ -2,6 +2,7 @@
 
 html {
   font-size: 10px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -14,12 +15,35 @@ body {
 
 section {
 	width: 100%;
+  padding: 15rem 0;
 }
 
 .wrapperOuter {
 	max-width: 1000px;
 	width: 75%;
 	margin: 0 auto;
+}
+
+footer {
+  width: 100%;
+  margin: 0 auto;
+  background: $mercury90;
+  text-align: center;
+  p {
+    font-size: 1.4rem;
+    margin: 0;
+    padding: 0 0 2.4rem 0;
+    color: lighten($thunder, 30%);
+  }
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
 }
 
 // end of general styles

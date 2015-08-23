@@ -1,25 +1,41 @@
 // header styles
 
-// h1 {
-//   font-family: 'Montserrat', sans-serif;
-//   font-size: 6rem;
-//   font-weight: 400;
-//   letter-spacing: 2px;
-//   text-transform: uppercase;
-//   color: $tradewind;
-//   margin: 0;
-//   padding: 0;
-// }
+h1, h2, h3, h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $tradewind;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 6rem;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-size: 2.8rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.6rem;
+  color: $thunder;
+}
 
 // paragraph styles
 
-/*p {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.8rem;
+p {
+  font-size: 1.6rem;
   font-weight: 400;
   line-height: 2.4rem;
-  color: rgba(76,76,76,1); 
-}*/
+  margin: 1.8rem 0;
+  color: $thunder; 
+}
 
 // link styles
 
@@ -27,20 +43,26 @@ a {
   font-family: 'Montserrat', sans-serif;
   font-size: 2.4rem;
   font-weight: 400;
-  color: rgba(76,76,76,1);
+  color: $thunder;
   text-transform: uppercase;
   text-decoration: none;
+  transition: all 0.2s ease;
 }
 
-a:hover {
-  color: rgba(110,183,158,1);
+a:hover,
+a:active,
+a:focus {
+  color: $tradewind;
 }
 
 .link {
-  fill: #4C4C4C;
+  fill: $thunder;
 }
-.link:hover {
-  fill: #6EB79E;
+
+.link:hover,
+.link:active,
+.link:focus {
+  fill: $tradewind;
   transition: fill 0.2s ease;
 }
 

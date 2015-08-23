@@ -1,3 +1,116 @@
 // work styles
 
+.sectionWork {
+  background: $nobel90;
+}
+
+.wrapperWork {
+	display: flex;
+	flex-direction: row;
+	background: $white90;
+	border: 2px solid $tangerine;
+	margin-bottom: 10rem;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.workImg {
+	width: 37.5%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1.8rem;
+	img {
+		width: 100%;
+	}
+}
+
+.wrapperWorkEven .workImg {
+	order: 3;
+}
+
+.workText {
+	width: 37.5%;
+	padding: 1.8rem 1.8rem 0 1.8rem;
+	border-left: 2px solid $tangerine;
+	border-right: 2px solid $tangerine;
+}
+
+.wrapperWorkEven .workText {
+	order: 2;
+	border-left: none;
+}
+
+.workTitle {
+	width: 25%;
+	p {
+		font-size: 2.8rem;
+		color: $tradewind;
+		margin: 0;
+  		padding: 0;
+	}
+}
+
+.wrapperWorkOdd .workTitle {
+	h2 {
+		text-align: right;
+	}
+}
+
+.wrapperWorkEven .workTitle {
+	order: 1;
+	border-right: 2px solid $tangerine;
+	p {
+		text-align: right;
+	}
+}
+
+.workTitleItem {
+	padding: 1.8rem;
+	border-bottom: 2px solid $tangerine;
+	&:last-child {
+		border-bottom: none;
+	}
+}
+
+.workTitleMain {
+	padding: 1.4rem 1.8rem;
+}
+
+.workTitleSkills {
+	padding-right: 2.4rem;
+	font-size: 1.6rem;
+	line-height: 2.2rem;
+	color: $thunder;
+	li {
+		display: inline;
+	}
+	li:after {
+		content: " | ";
+		color: $nobel;
+	}
+	li:last-child:after {
+		content: none;
+	}
+}
+
+.workTitleButton {
+	padding: 0;
+	a {
+		display: inline-block;
+		width: 100%;
+		padding: 1.8rem;
+		font-size: 1.6rem;
+		background: lighten($tangerine, 15%);
+		color: $thunder;
+	}
+	a:hover,
+	a:active,
+	a:focus {
+		background: lighten($tangerine, 10%);
+	}
+}
+
 // end of work styles

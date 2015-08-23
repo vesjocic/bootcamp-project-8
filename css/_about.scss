@@ -1,8 +1,99 @@
 // about styles
 
 .sectionAbout {
-  background: rgba(230,230,230,0.9);
-  height: 400px;
+  background: $mercury90;
 }
+
+.wrapperAbout {
+	display: flex;
+	flex-direction: column;
+	background: $white90;
+	border: 2px solid $palmas;
+}
+
+.wrapperAboutMain {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	border-bottom: 2px solid $palmas;
+}
+
+.aboutText {
+	width: 75%;
+	padding: 0 1.8rem;
+	border-right: 2px solid $palmas;
+}
+
+.aboutText a {
+	font-size: 1.6rem;
+	color: $tradewind;
+	text-transform: none;
+	text-decoration: underline;
+}
+
+.aboutText a:hover,
+.aboutText a:active,
+.aboutText a:focus {
+	color: darken($tradewind, 15%);
+}
+
+.aboutTitle {
+	width: 25%;
+	padding: 1.4rem 1.8rem;
+	text-align: right;
+}
+
+.wrapperSkills {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+
+.skillsTitle {
+	width: 25%;
+	padding: 1.4rem 1.8rem;
+	border-right: 2px solid $palmas;
+}
+
+.skillsText {
+	width: 75%;
+	display: flex;
+	flex-direction: row;
+	padding: 1.8rem;
+}
+
+.skillsTextTitles {
+	width: 20%;
+	h3 {
+		margin-bottom: 1.4rem;
+	}
+	h3:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.skillsTextItems {
+	width: 80%;
+	ul {
+		margin-bottom: 1.4rem;
+	}
+	ul:last-child {
+		margin-bottom: 0;
+	}
+	ul li {
+		display: inline;
+		font-size: 1.6rem;
+	  	font-weight: 400;
+	  	color: $thunder;
+	}
+	ul li:after {
+		content: " | ";
+		color: $nobel;
+	}
+	ul li:last-child:after {
+		content: none;
+	}
+}
+
 
 // end of about styles 

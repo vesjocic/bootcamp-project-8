@@ -1,18 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
 
-  <meta charset="UTF-8">
-  <title>Vesna Jocic | Front-End Developer + Designer</title>
+    <meta charset="UTF-8">
+    <title>Vesna Jocic | Front-End Developer + Designer</title>
 
-  <!-- loading fonts -->
-  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <!-- loading fonts -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
-  <!-- loading styles -->
-  <link rel="stylesheet" href="css/main.css">
-      
-</head>
+    <!-- loading styles -->
+    <link rel="stylesheet" href="css/main.css">
+        
+  </head>
   <body>
+
+    <nav id="nav">
+      <div class="wrapperOuter wrapperNav">
+        <div class="navItem navHome">
+          <a href="#intro" class="vee">V</a>
+          <a href="#intro" class="jay">J</a>
+        </div>
+        <div class="navItem navAbout">
+          <a href="#about">About</a>
+        </div>
+        <div class="navItem navWork">
+          <a href="#work">Work</a>
+        </div>
+        <div class="navItem navContact">
+          <a href="#contact">Contact</a>
+        </div>
+      </div> <!-- /.wrapperNav -->
+    </nav>
 
     <section id="intro" class="sectionIntro">
       <div class="wrapperOuter wrapperIntro">
@@ -43,47 +62,230 @@
           <!-- name text -->
           <text class="svgIntroText svgIntroText-name svgIntroText-nameFirst" transform="matrix(1 0 0 1 22 67.9702)" fill="#6EB79E" font-family="'Montserrat-Regular'" font-size="60">VESNA</text>
           <text class="svgIntroText svgIntroText-name svgIntroText-nameLast" transform="matrix(1 0 0 1 988.502 282)" fill="#6EB79E" font-family="'Montserrat-Regular'" font-size="60">JOCIC</text>
-          <g>
 
           <!-- nav text -->
           <text class="svgIntroText svgIntroText-nav svgIntroText-navAbout" transform="matrix(1 0 0 1 495.5811 347.999)" fill="#4C4C4C" font-family="'Montserrat-Regular'" font-size="24"><a class="link" xlink:href="#about">ABOUT</a></text>
-          </g>
           <text class="svgIntroText svgIntroText-nav svgIntroText-navWork" transform="matrix(1 0 0 1 803.9805 348)" fill="#4C4C4C" font-family="'Montserrat-Regular'" font-size="24"><a class="link" xlink:href="#work">WORK</a></text>
           <text class="svgIntroText svgIntroText-nav svgIntroText-navContact" transform="matrix(1 0 0 1 1057.9688 347.999)" fill="#4C4C4C" font-family="'Montserrat-Regular'" font-size="24"><a class="link" xlink:href="#contact">CONTACT</a></text>
           
-
         </svg> <!-- /. end of svg -->
       </div> <!-- /.wrapperIntro -->
     </section> <!-- /.sectionIntro -->
 
-    <section id="about" class="sectionAbout">
-      
+    <section id="about" class="sectionAbout">      
       <div class="wrapperOuter wrapperAbout">
-        <div class="aboutText"></div>
-        <div class="aboutTitle"></div>
-      </div> <!-- /.wrapperAbout -->
 
+        <div class="wrapperAboutMain">
+          <div class="aboutText">
+            <p>Hi, I’m Vesna. I'm a front-end web developer and graphic designer who loves to code and create in equal measure. If I had to choose between my console and my artboard, well... I wouldn't.</p>
+            <p>What matters to me most is collaborating with teammates and clients to produce thoughtful work, striving to bring a fresh perspective to design problems large and small, and creating user experiences that inform, engage, and delight &mdash; regardless of the platform.</p>
+            <p>If that sounds like your kind of party, <a href="#contact">I'd love to hear from you.</a></p>
+          </div> <!-- /.aboutText -->
+          <div class="aboutTitle">
+            <h2>About</h2>
+          </div> <!-- /.aboutTitle -->
+        </div> <!-- /.wrapperAboutMain -->
+
+        <div class="wrapperSkills">
+          <div class="skillsTitle">
+            <h2>Skills</h2>
+          </div> <!-- /.skillsTitle -->
+          <div class="skillsText">
+            <div class="skillsTextTitles">
+              <h3>Dev</h3>
+              <h3>Workflow</h3>
+              <h3>Design</h3>
+            </div> <!-- /.skillsTextTitles -->
+            <div class="skillsTextItems">
+              <ul class="dev">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>Sass</li>
+                <li>JavaScript</li>
+                <li>jQuery</li>
+                <li>API</li>
+                <li>WordPress</li>
+              </ul>
+              <ul class="workflow">
+                <li>Command Line</li>
+                <li>Git</li>
+                <li>Github</li>
+                <li>Gulp</li>
+                <li>Pair Programming</li>
+              </ul>
+              <ul class="design">
+                <li>UI Design</li>
+                <li>Visual Identities</li>
+                <li>Print</li>
+                <li>Graphic Environments</li>
+              </ul>
+            </div> <!-- /.skillsTextItems -->
+          </div> <!-- /.skillsText -->
+        </div> <!-- /.wrapperSkills -->
+
+      </div> <!-- /.wrapperAbout -->
     </section> <!-- /.sectionAbout -->
 
     <section id="work" class="sectionWork">
-      
-      <div class="wrapperOuter wrapperWork wrapperWork1">
+
+      <div class="wrapperOuter wrapperWork wrapperWorkOdd wrapperWork1">
+        <div class="workImg workImg1">
+          <figure>
+            <img src="images/frame-laptop.png" alt="Image of laptop screen and mobile phone screen showing responsive design for Pauline's Dinette website">
+          </figure>
+        </div> <!-- /.workImg1 -->
+
+        <div class="workText workText1">
+          <h3>Pauline's Dinette</h3>
+          <p>Lorem ipsum dolor sit amet, cons ectetur adipisicing elit. Error debitis quos sapiente, atque consectetur fuga, deserunt nulla magni.</p>
+          <p>Nesciunt prae sent ium ea earum fugit deserunt nobis velit obcaecati aperiam. Mollitia sit ipsam beatae velit delorean amit.</p>
+        </div> <!-- /.workText1 -->
+
+        <div class="workTitle workTitle1">
+          <div class="workTitleItem workTitleMain">
+            <h2>Work</h2>
+            <p>01</p>
+          </div> <!-- /.workTitleMain -->
+          <div class="workTitleItem workTitleType">
+            <h4>WordPress Theme</h4>
+          </div> <!-- /.workTitleType -->
+          <div class="workTitleItem workTitleSkills">
+            <ul>
+              <li>WordPress</li>
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>Sass</li>
+              <li>Git</li>
+              <li>Github</li>
+              <li>Gulp</li>
+              <li>UI Design</li>
+            </ul>
+          </div> <!-- /.workTitleSkills -->
+          <div class="workTitleItem workTitleButton">
+            <a href="http://vesnajocic.com/CustomWPTheme/" target="blank">View Live</a>
+          </div> <!-- /.workTitleButton -->
+
+        </div> <!-- /.workTitle1 -->
       </div> <!-- /.wrapperWork1 -->
 
-      <div class="wrapperOuter wrapperWork wrapperWork2">
+      <div class="wrapperOuter wrapperWork wrapperWorkEven wrapperWork2">
+        <div class="workImg workImg2">
+          <figure>
+            <img src="images/frame-laptop.png" alt="Image of laptop screen and mobile phone screen showing responsive design for the Celiac Menu Planner website">
+          </figure>
+        </div> <!-- /.workImg2 -->
+
+        <div class="workText workText2">
+          <h3>Celiac Menu Planner</h3>
+          <p>Lorem ipsum dolor sit amet, cons ectetur adipisicing elit. Error debitis quos sapiente, atque consectetur fuga, deserunt nulla magni.</p>
+          <p>Nesciunt prae sent ium ea earum fugit deserunt nobis velit obcaecati aperiam. Mollitia sit ipsam beatae velit delorean amit.</p>
+        </div> <!-- /.workText2 -->
+
+        <div class="workTitle workTitle2">
+          <div class="workTitleItem workTitleMain">
+            <h2>Work</h2>
+            <p>02</p>
+          </div> <!-- /.workTitleMain -->
+          <div class="workTitleItem workTitleType">
+            <h4>API Application</h4>
+          </div> <!-- /.workTitleType -->
+          <div class="workTitleItem workTitleSkills">
+            <ul>
+              <li>API</li>
+              <li>JavaScript</li>
+              <li>jQuery</li>
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>Sass</li>
+              <li>Git</li>
+              <li>Github</li>
+              <li>UI Design</li>
+            </ul>
+          </div> <!-- /.workTitleSkills -->
+          <div class="workTitleItem workTitleButton">
+            <a href="http://vesnajocic.com/CustomWPTheme/" target="blank">View Live</a>
+          </div> <!-- /.workTitleButton -->
+
+        </div> <!-- /.workTitle2 -->
       </div> <!-- /.wrapperWork2 -->
 
-      <div class="wrapperOuter wrapperWork wrapperWork3">
-      </div> <!-- /.wrapperWork3 -->
+      <div class="wrapperOuter wrapperWork wrapperWorkOdd wrapperWork3">
+        <div class="workImg workImg3">
+          <figure>
+            <img src="images/frame-laptop.png" alt="Image of laptop screen and mobile phone screen showing responsive design for the Hai&amp;Bay Law Practice website">
+          </figure>
+        </div> <!-- /.workImg3 -->
 
+        <div class="workText workText3">
+          <h3>Hai&amp;Bay Law Practice</h3>
+          <p>Lorem ipsum dolor sit amet, cons ectetur adipisicing elit. Error debitis quos sapiente, atque consectetur fuga, deserunt nulla magni.</p>
+          <p>Nesciunt prae sent ium ea earum fugit obcaecati aperiam. Mollitia sit ipsam beatae velit delorean amit.</p>
+        </div> <!-- /.workText3 -->
+
+        <div class="workTitle workTitle3">
+          <div class="workTitleItem workTitleMain">
+            <h2>Work</h2>
+            <p>03</p>
+          </div> <!-- /.workTitleMain -->
+          <div class="workTitleItem workTitleType">
+            <h4>PSD Conversion</h4>
+          </div> <!-- /.workTitleType -->
+          <div class="workTitleItem workTitleSkills">
+            <ul>
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>Sass</li>
+              <li>JavaScript</li>
+              <li>jQuery</li>
+            </ul>
+          </div> <!-- /.workTitleSkills -->
+          <div class="workTitleItem workTitleButton">
+            <a href="http://vesnajocic.com/CustomWPTheme/" target="blank">View Live</a>
+          </div> <!-- /.workTitleButton -->
+
+        </div> <!-- /.workTitle3 -->
+      </div> <!-- /.wrapperWork3 -->
     </section> <!-- /.sectionWork -->
 
     <section id="contact" class="sectionContact">
-      
       <div class="wrapperOuter wrapperContact">
-      </div> <!-- /.wrapperContact -->
 
+        <div class="contactTitle">
+          <h2>Contact</h2>
+        </div> <!-- /.contactTitle -->
+        <div class="contactText">
+          <p>Interested in discussing future projects? Curious to know more about how I can contribute to your team? Or just looking to say hello? Feel free to reach out through any (or all) of the following channels...</p>
+        </div> <!-- /.contactText -->
+        <div class="wrapperContactItems">
+          <div class="contactItem contactItem1">
+            <a href="mailto:hi@vesnajocic.com" target="blank">
+              <i class="fa fa-envelope-o"></i>
+              Email
+              <!-- hi@vesnajocic.com -->
+            </a>
+          </div> <!-- /.contactItems1 -->
+          <div class="contactItem contactItem2">
+            <a href="https://twitter.com/vesjocic" target="blank">
+              <i class="fa fa-twitter"></i>
+              Twitter
+              <!-- @vesjocic -->
+            </a>
+          </div> <!-- /.contactItems2 -->
+          <div class="contactItem contactItem3">
+            <a href="https://ca.linkedin.com/in/vesjocic" target="blank">
+              <i class="fa fa-linkedin"></i>
+              LinkedIn
+              <!-- vesjocic -->
+            </a>
+          </div> <!-- /.contactItems3 -->
+        </div> <!-- /.contactItems -->
+
+      </div> <!-- /.wrapperContact -->
     </section> <!-- /.sectionContact-->
+
+    <footer>
+      <p>&copy; Vesna Jocic 2015. All Rights Reserved.</p>
+    </footer>
 
     <!-- loading jquery -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
