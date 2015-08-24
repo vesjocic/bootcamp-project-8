@@ -160,7 +160,6 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
     opacity: 1; } }
 
 h1, h2, h3, h4 {
-  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   text-transform: uppercase;
   color: #6eb79e;
@@ -172,7 +171,7 @@ h1 {
   letter-spacing: 2px; }
 
 h2 {
-  font-size: 2.8rem; }
+  font-size: 2rem; }
 
 h3 {
   font-size: 1.6rem; }
@@ -189,7 +188,6 @@ p {
   color: #4c4c4c; }
 
 a {
-  font-family: 'Montserrat', sans-serif;
   font-size: 2.4rem;
   font-weight: 400;
   color: #4c4c4c;
@@ -233,23 +231,12 @@ section {
   width: 75%;
   margin: 0 auto; }
 
-footer {
-  width: 100%;
-  margin: 0 auto;
-  background: rgba(230, 230, 230, 0.9);
-  text-align: center; }
-  footer p {
-    font-size: 1.4rem;
-    margin: 0;
-    padding: 0 0 2.4rem 0;
-    color: #999999; }
+ul {
+  list-style: none; }
 
 ul, li {
   margin: 0;
   padding: 0; }
-
-ul {
-  list-style: none; }
 
 .hide {
   opacity: 0; }
@@ -259,6 +246,12 @@ nav {
   width: 100%;
   position: fixed;
   z-index: 199; }
+  nav svg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0; }
 
 .wrapperNav {
   display: -webkit-box;
@@ -287,9 +280,11 @@ nav {
   border-right: 2px solid #ff9163; }
 
 .navItem a {
-  font-size: 2rem; }
+  font-size: 2rem;
+  z-index: 299; }
 
 .navHome {
+  position: relative;
   text-align: left;
   display: -webkit-box;
   display: -webkit-flex;
@@ -345,6 +340,12 @@ nav {
 
 .sectionAbout {
   background: rgba(230, 230, 230, 0.9); }
+  .sectionAbout svg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0; }
 
 .wrapperAbout {
   display: -webkit-box;
@@ -389,6 +390,7 @@ nav {
   color: #489178; }
 
 .aboutTitle {
+  position: relative;
   width: 25%;
   padding: 1.4rem 1.8rem;
   text-align: right; }
@@ -406,6 +408,7 @@ nav {
           flex-direction: row; }
 
 .skillsTitle {
+  position: relative;
   width: 25%;
   padding: 1.4rem 1.8rem;
   border-right: 2px solid #d0dd41; }
@@ -449,6 +452,12 @@ nav {
 
 .sectionWork {
   background: rgba(179, 179, 179, 0.9); }
+  .sectionWork svg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0; }
 
 .wrapperWork {
   display: -webkit-box;
@@ -510,8 +519,10 @@ nav {
 
 .workTitle {
   width: 25%; }
+  .workTitle h2 {
+    margin-bottom: 2rem; }
   .workTitle p {
-    font-size: 2.8rem;
+    font-size: 2rem;
     color: #6eb79e;
     margin: 0;
     padding: 0; }
@@ -535,6 +546,7 @@ nav {
     border-bottom: none; }
 
 .workTitleMain {
+  position: relative;
   padding: 1.4rem 1.8rem; }
 
 .workTitleSkills {
@@ -566,6 +578,12 @@ nav {
 
 .sectionContact {
   background: rgba(230, 230, 230, 0.9); }
+  .sectionContact svg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0; }
 
 .wrapperContact {
   display: -webkit-box;
@@ -581,6 +599,7 @@ nav {
   border: 2px solid #d0dd41; }
 
 .contactTitle {
+  position: relative;
   width: 25%;
   padding: 1.4rem 1.8rem;
   border-right: 2px solid #d0dd41; }
@@ -614,3 +633,14 @@ nav {
   border-bottom: 2px solid #d0dd41; }
   .contactItem:last-child {
     border-bottom: none; }
+
+footer {
+  width: 100%;
+  margin: 0 auto;
+  background: rgba(230, 230, 230, 0.9);
+  text-align: center; }
+  footer p {
+    font-size: 1.4rem;
+    margin: 0;
+    padding: 0 0 2.4rem 0;
+    color: #999999; }

@@ -1,0 +1,16 @@
+// footer styles
+
+footer {
+  width: 100%;
+  margin: 0 auto;
+  background: $mercury90;
+  text-align: center;
+  p {
+    font-size: 1.4rem;
+    margin: 0;
+    padding: 0 0 2.4rem 0;
+    color: lighten($thunder, 30%);
+  }
+}
+
+// end of styles

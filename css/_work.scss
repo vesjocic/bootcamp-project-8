@@ -1,7 +1,10 @@
 // work styles
 
 .sectionWork {
-  background: $nobel90;
+  	background: $nobel90;
+    svg {
+    	@include svg-styles;
+  	}
 }
 
 .wrapperWork {
@@ -45,8 +48,11 @@
 
 .workTitle {
 	width: 25%;
+	h2 {
+		margin-bottom: 2rem;
+	}
 	p {
-		font-size: 2.8rem;
+		font-size: 2rem;
 		color: $tradewind;
 		margin: 0;
   		padding: 0;
@@ -76,6 +82,7 @@
 }
 
 .workTitleMain {
+	position: relative;
 	padding: 1.4rem 1.8rem;
 }
 

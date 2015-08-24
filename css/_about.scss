@@ -2,6 +2,9 @@
 
 .sectionAbout {
   	background: $mercury90;
+  	svg {
+  		@include svg-styles;
+	}
 }
 
 .wrapperAbout {
@@ -38,10 +41,20 @@
 }
 
 .aboutTitle {
+	position: relative;
 	width: 25%;
 	padding: 1.4rem 1.8rem;
 	text-align: right;
 }
+
+// .aboutTitle svg,
+// .skillsTitle svg {
+// 	position: absolute;
+// 	height: 100%;
+// 	width: 100%;
+// 	top: 0;
+// 	left: 0;
+// }
 
 .wrapperSkills {
 	width: 100%;
@@ -50,6 +63,7 @@
 }
 
 .skillsTitle {
+	position: relative;
 	width: 25%;
 	padding: 1.4rem 1.8rem;
 	border-right: 2px solid $palmas;

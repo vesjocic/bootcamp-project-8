@@ -1,7 +1,10 @@
 // contact styles
 
 .sectionContact {
-  background: $mercury90;
+  	background: $mercury90;
+    svg {
+  		@include svg-styles;
+	}
 }
 
 .wrapperContact {
@@ -12,6 +15,7 @@
 }
 
 .contactTitle {
+	position: relative;
 	width: 25%;
 	padding: 1.4rem 1.8rem;
 	border-right: 2px solid $palmas;

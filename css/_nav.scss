@@ -5,6 +5,9 @@ nav {
 	width: 100%;
 	position: fixed;
 	z-index: 199;
+	svg {
+  		@include svg-styles;
+	}
 }
 
 .wrapperNav {
@@ -25,9 +28,11 @@ nav {
 
 .navItem a {
 	font-size: 2rem;
+	z-index: 299;
 }
 
 .navHome {
+	position: relative;
 	text-align: left;
 	display: flex;
 	flex-direction: row;
