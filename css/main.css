@@ -301,6 +301,10 @@ nav {
           justify-content: space-between;
   padding: 0.6rem 1.3rem; }
 
+.navHome .jay {
+  text-align: right;
+  width: 100%; }
+
 .navHome .vee {
   -webkit-align-self: flex-end;
       -ms-flex-item-align: end;
@@ -329,6 +333,9 @@ nav {
       -ms-flex-align: center;
           align-items: center;
   background: rgba(255, 255, 255, 0.9); }
+
+.svgIntroText {
+  font-family: 'Montserrat', sans-serif; }
 
 .svgIntroText-name {
   -webkit-animation: fadeInNames 4s ease;
