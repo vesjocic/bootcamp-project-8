@@ -47,15 +47,6 @@
 	text-align: right;
 }
 
-// .aboutTitle svg,
-// .skillsTitle svg {
-// 	position: absolute;
-// 	height: 100%;
-// 	width: 100%;
-// 	top: 0;
-// 	left: 0;
-// }
-
 .wrapperSkills {
 	width: 100%;
 	display: flex;
@@ -72,27 +63,30 @@
 .skillsText {
 	width: 75%;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
+	justify-content: space-between;
 	padding: 1.8rem;
 }
 
-.skillsTextTitles {
-	width: 20%;
-	h3 {
-		margin-bottom: 1.4rem;
-	}
-	h3:last-child {
+.skillsTextItem {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 1.6rem;
+	&:last-child {
 		margin-bottom: 0;
 	}
-}
-
-.skillsTextItems {
-	width: 80%;
+	.skillsTextItemTitle {
+		width: 23%;
+		h3 {
+			margin-bottom: 1.4rem;
+		}
+		h3:last-child {
+			margin-bottom: 0;
+		}
+	}
 	ul {
-		margin-bottom: 1.4rem;
-	}
-	ul:last-child {
-		margin-bottom: 0;
+		width: 77%;
 	}
 	ul li {
 		display: inline;
@@ -108,6 +102,5 @@
 		content: none;
 	}
 }
-
 
 // end of about styles 

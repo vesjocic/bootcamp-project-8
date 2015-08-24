@@ -4,7 +4,7 @@ nav {
 	display: none;
 	width: 100%;
 	position: fixed;
-	z-index: 199;
+	z-index: 999;
 	svg {
   		@include svg-styles;
 	}

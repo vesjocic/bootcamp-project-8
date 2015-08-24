@@ -18,11 +18,12 @@ myPort.smoothScrollX = function() {
 		e.preventDefault();
 		// defining target variable for xlinks
 		var targetX = $($(this).attr('xlink:href'));
+		var text = $(this).attr('xlink:href');
 		// smooth scroll to target
 		$('html, body').stop().animate({
 			scrollTop: targetX.offset().top
 		}, 600, 'swing', function () {
-			window.location.hash = targetX;
+			window.location.hash = text;
 		});
 	});
 };
@@ -35,11 +36,12 @@ myPort.smoothScroll = function() {
 		e.preventDefault();
 		// defining target variable for links
 		var target = $(this.hash);
+		var text = $(this).attr('href');
 		// smooth scroll to target
 		$('html, body').stop().animate({
 			scrollTop: target.offset().top
 		}, 600, 'swing', function () {
-			window.location.hash = target;
+			window.location.hash = text;
 		});
 	});
 };
