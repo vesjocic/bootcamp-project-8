@@ -15,20 +15,20 @@
   </head>
   <body>
 
-    <nav id="nav">
+    <nav id="nav" class="nav">
       <div class="wrapperOuter wrapperNav">
         <div class="navItem navHome">
-          <a href="#intro" class="vee">V</a>
-          <a href="#intro" class="jay">J</a>
+          <a href="#intro" class="link vee">V</a>
+          <a href="#intro" class="link jay">J</a>
         </div>
         <div class="navItem navAbout">
-          <a href="#about">About</a>
+          <a href="#about" class="link">About</a>
         </div>
         <div class="navItem navWork">
-          <a href="#work">Work</a>
+          <a href="#work" class="link">Work</a>
         </div>
         <div class="navItem navContact">
-          <a href="#contact">Contact</a>
+          <a href="#contact" class="link">Contact</a>
         </div>
       </div> <!-- /.wrapperNav -->
     </nav>
@@ -64,22 +64,22 @@
           <text class="svgIntroText svgIntroText-name svgIntroText-nameLast" transform="matrix(1 0 0 1 988.502 282)" fill="#6EB79E" font-family="'Montserrat-Regular'" font-size="60">JOCIC</text>
 
           <!-- nav text -->
-          <text class="svgIntroText svgIntroText-nav svgIntroText-navAbout" transform="matrix(1 0 0 1 495.5811 347.999)" fill="#4C4C4C" font-family="'Montserrat-Regular'" font-size="24"><a class="link" xlink:href="#about">ABOUT</a></text>
-          <text class="svgIntroText svgIntroText-nav svgIntroText-navWork" transform="matrix(1 0 0 1 803.9805 348)" fill="#4C4C4C" font-family="'Montserrat-Regular'" font-size="24"><a class="link" xlink:href="#work">WORK</a></text>
-          <text class="svgIntroText svgIntroText-nav svgIntroText-navContact" transform="matrix(1 0 0 1 1057.9688 347.999)" fill="#4C4C4C" font-family="'Montserrat-Regular'" font-size="24"><a class="link" xlink:href="#contact">CONTACT</a></text>
+          <text class="svgIntroText svgIntroText-nav svgIntroText-navAbout" transform="matrix(1 0 0 1 495.5811 347.999)" fill="#4C4C4C" font-family="'Montserrat-Regular'" font-size="24"><a class="linkX" xlink:href="#about">ABOUT</a></text>
+          <text class="svgIntroText svgIntroText-nav svgIntroText-navWork" transform="matrix(1 0 0 1 803.9805 348)" fill="#4C4C4C" font-family="'Montserrat-Regular'" font-size="24"><a class="linkX" xlink:href="#work">WORK</a></text>
+          <text class="svgIntroText svgIntroText-nav svgIntroText-navContact" transform="matrix(1 0 0 1 1057.9688 347.999)" fill="#4C4C4C" font-family="'Montserrat-Regular'" font-size="24"><a class="linkX" xlink:href="#contact">CONTACT</a></text>
           
         </svg> <!-- /. end of svg -->
       </div> <!-- /.wrapperIntro -->
     </section> <!-- /.sectionIntro -->
 
     <section id="about" class="sectionAbout">      
-      <div class="wrapperOuter wrapperAbout">
+      <div class="wrapperOuter wrapperAbout hide">
 
         <div class="wrapperAboutMain">
           <div class="aboutText">
             <p>Hi, I’m Vesna. I'm a front-end web developer and graphic designer who loves to code and create in equal measure. If I had to choose between my console and my artboard, well... I wouldn't.</p>
             <p>What matters to me most is collaborating with teammates and clients to produce thoughtful work, striving to bring a fresh perspective to design problems large and small, and creating user experiences that inform, engage, and delight &mdash; regardless of the platform.</p>
-            <p>If that sounds like your kind of party, <a href="#contact">I'd love to hear from you.</a></p>
+            <p>If that sounds like your kind of party, <a href="#contact" class="link">I'd love to hear from you.</a></p>
           </div> <!-- /.aboutText -->
           <div class="aboutTitle">
             <h2>About</h2>
@@ -128,7 +128,7 @@
 
     <section id="work" class="sectionWork">
 
-      <div class="wrapperOuter wrapperWork wrapperWorkOdd wrapperWork1">
+      <div class="wrapperOuter wrapperWork wrapperWorkOdd wrapperWork1 hide">
         <div class="workImg workImg1">
           <figure>
             <img src="images/frame-laptop.png" alt="Image of laptop screen and mobile phone screen showing responsive design for Pauline's Dinette website">
@@ -168,7 +168,7 @@
         </div> <!-- /.workTitle1 -->
       </div> <!-- /.wrapperWork1 -->
 
-      <div class="wrapperOuter wrapperWork wrapperWorkEven wrapperWork2">
+      <div class="wrapperOuter wrapperWork wrapperWorkEven wrapperWork2 hide">
         <div class="workImg workImg2">
           <figure>
             <img src="images/frame-laptop.png" alt="Image of laptop screen and mobile phone screen showing responsive design for the Celiac Menu Planner website">
@@ -209,7 +209,7 @@
         </div> <!-- /.workTitle2 -->
       </div> <!-- /.wrapperWork2 -->
 
-      <div class="wrapperOuter wrapperWork wrapperWorkOdd wrapperWork3">
+      <div class="wrapperOuter wrapperWork wrapperWorkOdd wrapperWork3 hide">
         <div class="workImg workImg3">
           <figure>
             <img src="images/frame-laptop.png" alt="Image of laptop screen and mobile phone screen showing responsive design for the Hai&amp;Bay Law Practice website">
@@ -248,7 +248,7 @@
     </section> <!-- /.sectionWork -->
 
     <section id="contact" class="sectionContact">
-      <div class="wrapperOuter wrapperContact">
+      <div class="wrapperOuter wrapperContact hide">
 
         <div class="contactTitle">
           <h2>Contact</h2>
@@ -292,9 +292,6 @@
 
     <!-- loading walkway.js -->
     <script type='text/javascript' src='http://cdn.jsdelivr.net/walkway/0.0.1/walkway.min.js'></script>
-
-    <!-- script for smoothscroll -->
-    <script type="text/javascript" src="js/smoothscroll.js"></script>
 
     <!-- loading js file -->
     <script src="js/main.js"></script>

@@ -55,13 +55,13 @@ a:focus {
   color: $tradewind;
 }
 
-.link {
+.linkX {
   fill: $thunder;
 }
 
-.link:hover,
-.link:active,
-.link:focus {
+.linkX:hover,
+.linkX:active,
+.linkX:focus {
   fill: $tradewind;
   transition: fill 0.2s ease;
 }

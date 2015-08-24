@@ -203,12 +203,12 @@ a:active,
 a:focus {
   color: #6eb79e; }
 
-.link {
+.linkX {
   fill: #4c4c4c; }
 
-.link:hover,
-.link:active,
-.link:focus {
+.linkX:hover,
+.linkX:active,
+.linkX:focus {
   fill: #6eb79e;
   -webkit-transition: fill 0.2s ease;
           transition: fill 0.2s ease; }
@@ -251,11 +251,14 @@ ul, li {
 ul {
   list-style: none; }
 
+.hide {
+  opacity: 0; }
+
 nav {
+  display: none;
   width: 100%;
   position: fixed;
-  z-index: 199;
-  padding-top: 25px; }
+  z-index: 199; }
 
 .wrapperNav {
   display: -webkit-box;
