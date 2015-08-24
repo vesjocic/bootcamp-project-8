@@ -184,7 +184,7 @@ p {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 2.4rem;
-  margin: 1.8rem 0;
+  margin: 1.6rem 0;
   color: #4c4c4c; }
 
 a {
@@ -224,7 +224,7 @@ body {
 
 section {
   width: 100%;
-  padding: 15rem 0; }
+  padding: 10rem 0; }
 
 .wrapperOuter {
   max-width: 1000px;
@@ -240,6 +240,18 @@ ul, li {
 
 .hide {
   opacity: 0; }
+
+@media all and (max-width: 1000px) {
+  html {
+    font-size: 9px; } }
+
+@media all and (max-width: 900px) {
+  html {
+    font-size: 8.5px; } }
+
+@media all and (max-width: 800px) {
+  html {
+    font-size: 8.5px; } }
 
 nav {
   display: none;
@@ -312,6 +324,21 @@ nav {
 
 .navContact {
   border-right: none; }
+
+@media all and (max-width: 600px) {
+  .wrapperNav {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+  .navItem {
+    width: 50%;
+    border: none; }
+  .navHome,
+  .navAbout {
+    border-bottom: 2px solid #ff9163; }
+  .navHome,
+  .navWork {
+    border-right: 2px solid #ff9163; } }
 
 .sectionIntro {
   height: 100vh;
@@ -435,7 +462,7 @@ nav {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 1.8rem; }
+  padding: 1.4rem 1.8rem; }
 
 .skillsTextItem {
   width: 100%;
@@ -448,27 +475,106 @@ nav {
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin-bottom: 1.6rem; }
+  margin-bottom: 1rem; }
   .skillsTextItem:last-child {
     margin-bottom: 0; }
-  .skillsTextItem .skillsTextItemTitle {
-    width: 23%; }
-    .skillsTextItem .skillsTextItemTitle h3 {
-      margin-bottom: 1.4rem; }
-    .skillsTextItem .skillsTextItemTitle h3:last-child {
-      margin-bottom: 0; }
-  .skillsTextItem ul {
-    width: 77%; }
-  .skillsTextItem ul li {
+
+.skillsTextItemTitle {
+  width: 23%; }
+  .skillsTextItemTitle h3 {
+    margin-bottom: 1.4rem;
+    line-height: 2.4rem; }
+  .skillsTextItemTitle h3:last-child {
+    margin-bottom: 0; }
+
+.skillsTextItemList {
+  width: 77%; }
+  .skillsTextItemList li {
     display: inline;
     font-size: 1.6rem;
     font-weight: 400;
+    line-height: 2.4rem;
     color: #4c4c4c; }
-  .skillsTextItem ul li:after {
+  .skillsTextItemList li:after {
     content: " | ";
     color: #b3b3b3; }
-  .skillsTextItem ul li:last-child:after {
+  .skillsTextItemList li:last-child:after {
     content: none; }
+
+@media all and (max-width: 950px) {
+  .skillsTextItemTitle {
+    width: 25%; }
+  .skillsTextItemList {
+    width: 75%; } }
+
+@media all and (max-width: 900px) {
+  .skillsTextItemTitle {
+    width: 28%; }
+  .skillsTextItemList {
+    width: 72%; } }
+
+@media all and (max-width: 800px) {
+  .skillsTextItemTitle {
+    width: 30%; }
+  .skillsTextItemList {
+    width: 70%; } }
+
+@media all and (max-width: 750px) {
+  .skillsTextItemTitle {
+    width: 32%; }
+  .skillsTextItemList {
+    width: 68%; } }
+
+@media all and (max-width: 750px) {
+  .skillsTextItemTitle {
+    width: 35%; }
+  .skillsTextItemList {
+    width: 65%; } }
+
+@media all and (max-width: 600px) {
+  .wrapperAboutMain {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+  .aboutTitle {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 100%;
+    border-bottom: 2px solid #d0dd41; }
+    .aboutTitle h2 {
+      margin-bottom: 1rem; }
+  .aboutText {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 100%;
+    border-right: none; }
+  .wrapperSkills {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+  .skillsTitle {
+    width: 100%;
+    border-right: none;
+    border-bottom: 2px solid #d0dd41; }
+  .skillsText {
+    width: 100%; }
+  #svgAbout line,
+  #svgSkills line {
+    stroke-width: 14; } }
 
 .sectionWork {
   background: rgba(179, 179, 179, 0.9); }
@@ -621,6 +727,41 @@ nav {
   .workTitleButton a:focus {
     background: #ffb596; }
 
+@media all and (max-width: 900px) {
+  .wrapperWork {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+  .workImg {
+    width: 100%;
+    border-top: 2px solid #ff9163;
+    text-align: center;
+    padding: 4rem; }
+    .workImg img {
+      width: 75%; }
+  .wrapperWorkOdd .workImg {
+    -webkit-box-ordinal-group: 4;
+    -webkit-order: 3;
+        -ms-flex-order: 3;
+            order: 3; }
+  .wrapperWorkEven .workTitle,
+  .wrapperWorkOdd .workTitle {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 50%; }
+  .wrapperWorkEven .workTitle {
+    border-right: none; }
+  .wrapperWorkEven .workText,
+  .wrapperWorkOdd .workText {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 50%;
+    border-left: none; } }
+
 .sectionContact {
   background: rgba(230, 230, 230, 0.9); }
   .sectionContact svg {
@@ -716,6 +857,32 @@ nav {
     left: 0;
     bottom: 0;
     background: #e5ec98; }
+
+@media all and (max-width: 900px) {
+  .wrapperContact {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+  .contactTitle {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 50%; }
+  .contactText {
+    -webkit-box-ordinal-group: 4;
+    -webkit-order: 3;
+        -ms-flex-order: 3;
+            order: 3;
+    width: 100%;
+    border-right: none;
+    border-top: 2px solid #d0dd41; }
+  .wrapperContactItems {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 50%; } }
 
 footer {
   width: 100%;

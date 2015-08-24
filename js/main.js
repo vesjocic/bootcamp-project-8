@@ -22,7 +22,7 @@ myPort.smoothScrollX = function() {
 		// smooth scroll to target
 		$('html, body').stop().animate({
 			scrollTop: targetX.offset().top
-		}, 600, 'swing', function () {
+		}, 900, 'swing', function () {
 			window.location.hash = text;
 		});
 	});
@@ -40,7 +40,7 @@ myPort.smoothScroll = function() {
 		// smooth scroll to target
 		$('html, body').stop().animate({
 			scrollTop: target.offset().top
-		}, 600, 'swing', function () {
+		}, 900, 'swing', function () {
 			window.location.hash = text;
 		});
 	});
@@ -76,7 +76,7 @@ myPort.showDivs = function() {
 			var bottom_of_window = $(window).scrollTop() + $(window).height();
 			// if the object is completely visible in the window, fade it in
 			if ( bottom_of_window > bottom_of_object ) {
-				$(this).animate({'opacity':'1'},500);
+				$(this).animate({'opacity':'1'},300);
 			}
 		});
 	});

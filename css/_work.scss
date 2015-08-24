@@ -126,4 +126,38 @@
 	}
 }
 
+// media queries
+
+@media all and (max-width: 900px) {
+	.wrapperWork {
+		flex-wrap: wrap;
+	}
+	.workImg {
+		width: 100%;
+		border-top: 2px solid $tangerine;
+		text-align: center;
+		padding: 4rem;
+		img {
+			width: 75%;
+		}
+	}
+	.wrapperWorkOdd .workImg {
+		order: 3;
+	}
+	.wrapperWorkEven .workTitle,
+	.wrapperWorkOdd .workTitle {
+		order: 2;
+		width: 50%;
+	}
+	.wrapperWorkEven .workTitle {
+		border-right: none;
+	}
+	.wrapperWorkEven .workText,
+	.wrapperWorkOdd .workText {
+		order: 1;
+		width: 50%;
+		border-left: none;
+	}
+}
+
 // end of work styles

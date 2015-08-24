@@ -15,7 +15,7 @@ body {
 
 section {
 	width: 100%;
-  padding: 15rem 0;
+  padding: 10rem 0;
 }
 
 .wrapperOuter {
@@ -35,6 +35,26 @@ ul, li {
 
 .hide {
   opacity: 0;
+}
+
+// media queries
+
+@media all and (max-width: 1000px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+@media all and (max-width: 900px) {
+  html {
+    font-size: 8.5px;
+  }
+}
+
+@media all and (max-width: 800px) {
+  html {
+    font-size: 8.5px;
+  }
 }
 
 // end of general styles

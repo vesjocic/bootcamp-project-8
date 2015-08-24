@@ -53,4 +53,24 @@ nav {
 	border-right: none;
 }
 
+// media queries
+
+@media all and (max-width: 600px) {
+	.wrapperNav {
+		flex-wrap: wrap;
+	}
+	.navItem {
+  		width: 50%;
+  		border: none;
+  	}
+  	.navHome,
+  	.navAbout {
+  		border-bottom: 2px solid $tangerine;
+  	}
+  	.navHome,
+  	.navWork {
+  		border-right: 2px solid $tangerine;
+  	}
+}
+
 // end of nav styles

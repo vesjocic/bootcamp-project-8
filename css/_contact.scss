@@ -75,4 +75,26 @@
 	}
 }
 
+// media queries
+
+@media all and (max-width: 900px) {
+	.wrapperContact {
+		flex-wrap: wrap;
+	}
+	.contactTitle {
+		order: 1;
+		width: 50%;
+	}
+	.contactText {
+		order: 3;
+		width: 100%;
+		border-right: none;
+		border-top: 2px solid $palmas;
+	}
+	.wrapperContactItems {
+		order: 2;
+		width: 50%;
+	}
+}
+
 // end of contact styles
