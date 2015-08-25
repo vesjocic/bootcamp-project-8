@@ -1,24 +1,83 @@
 // intro section styles
 
 .sectionIntro {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: rgba(255,255,255,0.9);
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: $white90;
 }
 
-.svgIntroText {
-  font-family: 'Montserrat', sans-serif;
+.wrapperIntro {
+	position: relative;
 }
 
-.svgIntroText-name {
-  animation: fadeInNames 4s ease;
+.svgOverlay {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
-.svgIntroText-nav {
-  animation: fadeInNav 5s ease;
+.svgHeader {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	.svgHeaderText {
+		font-family: 'Montserrat', sans-serif;
+		animation: fadeInNames 4s ease;
+	}
+	.svgHeaderText-vesna {
+		padding: 0.6rem 0 0 1.8rem;
+	}
+	.svgHeaderText-jocic {
+		text-align: right;
+		padding: 0 1.8rem 1rem 0;
+	}
 }
+
+.svgNav {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	text-align: right;
+	.svgNavItem {
+		width: 25%;
+		animation: fadeInNav 5s ease;
+		a {
+			display: block;
+			margin: 0 1.4rem 0 0;
+			font-size: 2rem;
+			line-height: 2;
+		}
+		p {
+			margin: 0;
+		}
+	}
+}
+
+// media queries
+
+@media all and (max-width: 1200px) {
+	.svgHeader h1 {
+		font-size: 5rem;
+	}
+}
+
+@media all and (max-width: 1100px) {
+	.svgHeader h1 {
+		font-size: 4rem;
+	}
+}
+
+// @media all and (max-width: 1000px) {
+// 	#svgIntroLg {
+// 		display: none;
+// 	}
+// }
 
 // end of intro section styles

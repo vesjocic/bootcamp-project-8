@@ -4,29 +4,43 @@ var myPort = {};
 // method to draw SVG
 myPort.drawSVG = function() {
 	var svg = new Walkway({ 
-	    	selector: '#svgIntro',
+	    	selector: '.svgIntro',
 	    	duration: '2000', 
 	    }); 
 	svg.draw();
 };
 
-// method for smooth scrolling of xlinks
-myPort.smoothScrollX = function() {
-	// on click of xlink:hrefs do the following
-	$('.linkX').on('click',function (e) {
-		// prevent default action
-		e.preventDefault();
-		// defining target variable for xlinks
-		var targetX = $($(this).attr('xlink:href'));
-		var text = $(this).attr('xlink:href');
-		// smooth scroll to target
-		$('html, body').stop().animate({
-			scrollTop: targetX.offset().top
-		}, 900, 'swing', function () {
-			window.location.hash = text;
-		});
+// method to set height of svgOverlay and divs
+myPort.setSvgOverlay = function() {
+	$(window).on('load resize', function(e) {
+	    // defining variables to hold svg height
+	    var $svgHeight = $('.svgIntro').height();
+	    var $svgNavHeight = $('.svgNav').height();
+	    var $svgHeadHeight = $svgHeight - $svgNavHeight;
+	    // using attr method to set height of div
+	    $( '.svgOverlay' ).attr( 'style', 'height: ' + $svgHeight + 'px' );
+	    $( '.svgNav' ).attr( 'style', 'height: ' + $svgNavHeight + 'px' );
+	    $( '.svgHeader' ).attr( 'style', 'height: ' + $svgHeadHeight + 'px' );
 	});
 };
+
+// method for smooth scrolling of xlinks
+// myPort.smoothScrollX = function() {
+// 	// on click of xlink:hrefs do the following
+// 	$('.linkX').on('click',function (e) {
+// 		// prevent default action
+// 		e.preventDefault();
+// 		// defining target variable for xlinks
+// 		var targetX = $($(this).attr('xlink:href'));
+// 		var text = $(this).attr('xlink:href');
+// 		// smooth scroll to target
+// 		$('html, body').stop().animate({
+// 			scrollTop: targetX.offset().top
+// 		}, 900, 'swing', function () {
+// 			window.location.hash = text;
+// 		});
+// 	});
+// };
 
 // method for smooth scrolling regular links
 myPort.smoothScroll = function() {
@@ -52,7 +66,7 @@ myPort.showNav = function() {
 	$(window).scroll(function() {
 		// defining bottom of svg
 		// bottom of svg = position of top of svg + height of svg
-		var bottom_of_svg = $('#svgIntro').offset().top + $('#svgIntro').outerHeight();
+		var bottom_of_svg = $('.svgIntro').offset().top + $('.svgIntro').outerHeight();
 		// if the svg is completely hidden, fade in nav
 		if ( $(window).scrollTop() > bottom_of_svg ) {
 		    $('#nav').fadeIn(300);
@@ -85,7 +99,8 @@ myPort.showDivs = function() {
 // define init function
 myPort.init = function() {
 	myPort.drawSVG();
-	myPort.smoothScrollX();
+	myPort.setSvgOverlay();
+	// myPort.smoothScrollX();
 	myPort.smoothScroll();
 	myPort.showNav();
 	myPort.showDivs();

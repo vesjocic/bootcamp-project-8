@@ -202,6 +202,7 @@ a:focus {
   color: #6eb79e; }
 
 .linkX {
+  font-size: 2.4rem;
   fill: #4c4c4c; }
 
 .linkX:hover,
@@ -365,16 +366,83 @@ nav {
           align-items: center;
   background: rgba(255, 255, 255, 0.9); }
 
-.svgIntroText {
-  font-family: 'Montserrat', sans-serif; }
+.wrapperIntro {
+  position: relative; }
 
-.svgIntroText-name {
-  -webkit-animation: fadeInNames 4s ease;
-          animation: fadeInNames 4s ease; }
+.svgOverlay {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
 
-.svgIntroText-nav {
-  -webkit-animation: fadeInNav 5s ease;
-          animation: fadeInNav 5s ease; }
+.svgHeader {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .svgHeader .svgHeaderText {
+    font-family: 'Montserrat', sans-serif;
+    -webkit-animation: fadeInNames 4s ease;
+            animation: fadeInNames 4s ease; }
+  .svgHeader .svgHeaderText-vesna {
+    padding: 0.6rem 0 0 1.8rem; }
+  .svgHeader .svgHeaderText-jocic {
+    text-align: right;
+    padding: 0 1.8rem 1rem 0; }
+
+.svgNav {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  text-align: right; }
+  .svgNav .svgNavItem {
+    width: 25%;
+    -webkit-animation: fadeInNav 5s ease;
+            animation: fadeInNav 5s ease; }
+    .svgNav .svgNavItem a {
+      display: block;
+      margin: 0 1.4rem 0 0;
+      font-size: 2rem;
+      line-height: 2; }
+    .svgNav .svgNavItem p {
+      margin: 0; }
+
+@media all and (max-width: 1200px) {
+  .svgHeader h1 {
+    font-size: 5rem; } }
+
+@media all and (max-width: 1100px) {
+  .svgHeader h1 {
+    font-size: 4rem; } }
 
 .sectionAbout {
   background: rgba(230, 230, 230, 0.9); }
