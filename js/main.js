@@ -13,14 +13,30 @@ myPort.drawSVG = function() {
 // method to set height of svgOverlay and divs
 myPort.setSvgOverlay = function() {
 	$(window).on('load resize', function(e) {
-	    // defining variables to hold svg height
-	    var $svgHeight = $('.svgIntro').height();
-	    var $svgNavHeight = $('.svgNav').height();
-	    var $svgHeadHeight = $svgHeight - $svgNavHeight;
-	    // using attr method to set height of div
-	    $( '.svgOverlay' ).attr( 'style', 'height: ' + $svgHeight + 'px' );
-	    $( '.svgNav' ).attr( 'style', 'height: ' + $svgNavHeight + 'px' );
-	    $( '.svgHeader' ).attr( 'style', 'height: ' + $svgHeadHeight + 'px' );
+		if ($(window).width() > 1100) {
+			// defining variables to hold svg height
+			var $svgHeight = $('#svgIntroLg').height();
+			var $svgNavHeight = $svgHeight*0.16666667;
+			var $svgHeadHeight = $svgHeight - $svgNavHeight;
+			// using attr method to set height of div
+			$( '.svgOverlay' ).attr( 'style', 'height: ' + $svgHeight + 'px' );
+			$( '.svgNav' ).attr( 'style', 'height: ' + $svgNavHeight + 'px' );
+			$( '.svgHeader' ).attr( 'style', 'height: ' + $svgHeadHeight + 'px' );
+		} else if ($(window).width() > 600 && $(window).width() <= 1100) {
+		    var $svgHeight = $('#svgIntroMed').height();
+		    var $svgNavHeight = $svgHeight*0.19512;
+		    var $svgHeadHeight = $svgHeight - $svgNavHeight;
+		    $( '.svgOverlay' ).attr( 'style', 'height: ' + $svgHeight + 'px' );
+		    $( '.svgNav' ).attr( 'style', 'height: ' + $svgNavHeight + 'px' );
+		    $( '.svgHeader' ).attr( 'style', 'height: ' + $svgHeadHeight + 'px' );
+		} else {
+			var $svgHeight = $('#svgIntroSm').height();
+			var $svgNavHeight = $svgHeight*0.3265306122449;
+			var $svgHeadHeight = $svgHeight - $svgNavHeight;
+			$( '.svgOverlay' ).attr( 'style', 'height: ' + $svgHeight + 'px' );
+			$( '.svgNav' ).attr( 'style', 'height: ' + $svgNavHeight + 'px' );
+			$( '.svgHeader' ).attr( 'style', 'height: ' + $svgHeadHeight + 'px' );
+		}
 	});
 };
 
@@ -64,14 +80,30 @@ myPort.smoothScroll = function() {
 myPort.showNav = function() {
 	// on scroll do the following
 	$(window).scroll(function() {
-		// defining bottom of svg
-		// bottom of svg = position of top of svg + height of svg
-		var bottom_of_svg = $('.svgIntro').offset().top + $('.svgIntro').outerHeight();
-		// if the svg is completely hidden, fade in nav
-		if ( $(window).scrollTop() > bottom_of_svg ) {
-		    $('#nav').fadeIn(300);
+		if ($(window).width() > 1100) {
+			// defining bottom of svg
+			// bottom of svg = position of top of svg + height of svg
+			var bottom_of_svg = $('#svgIntroLg').offset().top + $('#svgIntroLg').outerHeight();
+			// if the svg is completely hidden, fade in nav
+			if ( $(window).scrollTop() > bottom_of_svg ) {
+			    $('#nav').fadeIn(300);
+			} else {
+			    $('#nav').fadeOut(300);
+			}
+		} else if ($(window).width() > 600 && $(window).width() <= 1100) {
+			var bottom_of_svg = $('#svgIntroMed').offset().top + $('#svgIntroMed').outerHeight();
+			if ( $(window).scrollTop() > bottom_of_svg ) {
+			    $('#nav').fadeIn(300);
+			} else {
+			    $('#nav').fadeOut(300);
+			}
 		} else {
-		    $('#nav').fadeOut(300);
+			var bottom_of_svg = $('#svgIntroSm').offset().top + $('#svgIntroSm').outerHeight();
+			if ( $(window).scrollTop() > bottom_of_svg ) {
+			    $('#nav').fadeIn(300);
+			} else {
+			    $('#nav').fadeOut(300);
+			}
 		}
 	});
 }
@@ -80,19 +112,33 @@ myPort.showNav = function() {
 myPort.showDivs = function() {
 	// on scroll do the following
 	$(window).scroll(function() {
-		// check location of each element
-		$('.hide').each( function(i) {
-			// defining bottom of object
-			// bottom of object = position of top of div + div height
-			var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-			// defining bottom of window
-			// bottom of window = pixels hidden above + height of current window
-			var bottom_of_window = $(window).scrollTop() + $(window).height();
-			// if the object is completely visible in the window, fade it in
-			if ( bottom_of_window > bottom_of_object ) {
-				$(this).animate({'opacity':'1'},300);
-			}
-		});
+		if ($(window).width() > 600) {
+			// check location of each element
+			$('.hide').each( function(i) {
+				// defining bottom of object
+				// bottom of object = position of top of div + div height
+				var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+				// defining bottom of window
+				// bottom of window = pixels hidden above + height of current window
+				var bottom_of_window = $(window).scrollTop() + $(window).height();
+				// if the object is completely visible in the window, fade it in
+				if ( bottom_of_window > bottom_of_object ) {
+					$(this).animate({'opacity':'1'},300);
+				}
+			});
+		} else {
+			// check location of each element
+			$('.hide').each( function(i) {
+				// defining top of object
+				var top_of_object = $(this).offset().top;
+				// defining bottom of nav + 150px padding
+				var bottom_of_nav = $('#nav').offset().top + $('#nav').outerHeight() + 150;
+				// top of object crosses the threshold
+				if ( top_of_object <= bottom_of_nav ) {
+					$(this).animate({'opacity':'1'},300);
+				}
+			});
+		}
 	});
 }
 

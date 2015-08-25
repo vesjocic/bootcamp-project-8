@@ -65,4 +65,12 @@ a:focus {
   transition: fill 0.2s ease;
 }
 
+// media queries
+
+@media all and (max-width: 500px) {
+  h2 {
+    font-size: 1.8rem;
+  }
+}
+
 // end of typography styles
