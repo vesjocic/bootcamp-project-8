@@ -136,6 +136,7 @@ myPort.showDivs = function() {
 				// top of object crosses the threshold
 				if ( top_of_object <= bottom_of_nav ) {
 					$(this).animate({'opacity':'1'},300);
+					$('.workExtraButton').animate({'opacity':'1'},300);
 				}
 			});
 		}
