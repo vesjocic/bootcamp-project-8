@@ -145,7 +145,7 @@
 	}
 }
 
-@media all and (max-width: 750px) {
+@media all and (max-width: 700px) {
 	.skillsTextItemTitle {
 		width: 35%;
 	}
@@ -180,6 +180,15 @@
 		width: 100%;
 		border-right: none;
 		border-bottom: 2px solid $palmas;
+		h2 {
+			margin-bottom: 1rem;
+		}
+	}
+	.skillsTextItemTitle {
+		width: 30%;
+	}
+	.skillsTextItemList {
+		width: 70%;
 	}
 	.skillsText {
 		width: 100%;
@@ -187,6 +196,25 @@
 	#svgAbout line,
 	#svgSkills line {
 		stroke-width: 14;
+	}
+}
+
+@media all and (max-width: 500px) {
+	.skillsTextItem {
+		flex-direction: column;
+	}
+	.skillsTextItemTitle,
+	.skillsTextItemList {
+		width: 100%;
+	}
+}
+
+@media all and (max-width: 400px) {
+	.aboutTitle,
+	.skillsTitle {
+		h2 {
+			margin-bottom: 2rem;
+		}
 	}
 }
 

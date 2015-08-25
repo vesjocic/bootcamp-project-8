@@ -52,9 +52,11 @@
 	flex-direction: column;
 	justify-content: space-between;
 	h2 {
+		display: block;
 		margin-bottom: 2rem;
 	}
 	p {
+		display: block;
 		font-size: 2rem;
 		color: $tradewind;
 		margin: 0;
@@ -87,8 +89,11 @@
 
 .workTitleMain {
 	position: relative;
-	padding: 1.4rem 1.8rem;
+	padding: 1.4rem 1.8rem 1.2rem 1.8rem;
 	flex-grow: 2;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .workTitleSkills {
@@ -126,6 +131,10 @@
 	}
 }
 
+.workExtraButton {
+	display: none;
+}
+
 // media queries
 
 @media all and (max-width: 900px) {
@@ -144,19 +153,131 @@
 	.wrapperWorkOdd .workImg {
 		order: 3;
 	}
-	.wrapperWorkEven .workTitle,
 	.wrapperWorkOdd .workTitle {
 		order: 2;
 		width: 50%;
 	}
 	.wrapperWorkEven .workTitle {
-		border-right: none;
+		order: 1;
+		width: 50%;
 	}
-	.wrapperWorkEven .workText,
 	.wrapperWorkOdd .workText {
 		order: 1;
 		width: 50%;
 		border-left: none;
+	}
+	.wrapperWorkEven .workText {
+		order: 2;
+		width: 50%;
+		border-right: none;
+	}
+}
+
+@media all and (max-width: 700px) {
+	.workImg {
+		padding: 3rem;
+	}
+}
+
+@media all and (max-width: 600px) {
+	.wrapperWork {
+		margin-bottom: 0;
+	}
+	.wrapperWorkOdd .workTitle,
+	.wrapperWorkEven .workTitle {
+		order: 1;
+		width: 100%;
+		flex-direction: row;
+	}
+	.wrapperWorkEven .workTitle {
+		border-right: none;
+	}
+	.wrapperWorkOdd .workTitleMain {
+		order: 2;
+		border-right: none;
+	}
+	.wrapperWorkOdd .workTitleSub {
+		order: 1;
+		border-right: 2px solid $tangerine;
+	}
+	.wrapperWorkOdd .workText,
+	.wrapperWorkEven .workText {
+		order: 2;
+		width: 100%;
+		border-right: none;
+		border-top: 2px solid $tangerine;
+	}
+	.workTitleMain {
+		width: 50%;
+		border-right: 2px solid $tangerine;
+		border-bottom: none;
+	}
+	.workTitleSub {
+		width: 50%;
+		display: flex;
+		flex-direction: column;
+		.workTitleSkills {
+			border-bottom: none;
+		}
+	}
+	.workTitleButton {
+		display: none;
+	}
+	.workExtraButton {
+		display: block;
+		border: 2px solid $tangerine;
+		border-top: none;
+		margin-bottom: 10rem;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		a {
+			display: inline-block;
+			width: 100%;
+			padding: 1.8rem;
+			font-size: 1.6rem;
+			background: lighten($tangerine, 15%);
+			color: $thunder;
+			text-align: center;
+		}
+		a:hover,
+		a:active,
+		a:focus {
+			background: lighten($tangerine, 10%);
+		}
+	}
+	#svgWork1 line,
+	#svgWork2 line,
+	#svgWork3 line {
+		stroke-width: 6;
+	}
+}
+
+@media all and (max-width: 500px) {
+	.wrapperWorkOdd .workTitle,
+	.wrapperWorkEven .workTitle, {
+		flex-direction: column;
+	}
+	.wrapperWorkOdd .workTitleMain,
+	.wrapperWorkEven .workTitleMain {
+		order: 1;
+		width: 100%;
+		border-bottom: 2px solid $tangerine;
+		border-right: none;
+	}
+	.wrapperWorkOdd .workTitleSub,
+	.wrapperWorkEven .workTitleSub {
+		order: 2;
+		width: 100%;
+		border-right: none;
+	}
+	.workImg {
+		padding: 2rem;
+	}
+	#svgWork1 line,
+	#svgWork2 line,
+	#svgWork3 line {
+		stroke-width: 10;
 	}
 }
 

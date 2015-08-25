@@ -253,6 +253,10 @@ ul, li {
   html {
     font-size: 8.5px; } }
 
+@media all and (max-width: 700px) {
+  html {
+    font-size: 8px; } }
+
 nav {
   display: none;
   width: 100%;
@@ -525,7 +529,7 @@ nav {
   .skillsTextItemList {
     width: 68%; } }
 
-@media all and (max-width: 750px) {
+@media all and (max-width: 700px) {
   .skillsTextItemTitle {
     width: 35%; }
   .skillsTextItemList {
@@ -570,11 +574,33 @@ nav {
     width: 100%;
     border-right: none;
     border-bottom: 2px solid #d0dd41; }
+    .skillsTitle h2 {
+      margin-bottom: 1rem; }
+  .skillsTextItemTitle {
+    width: 30%; }
+  .skillsTextItemList {
+    width: 70%; }
   .skillsText {
     width: 100%; }
   #svgAbout line,
   #svgSkills line {
     stroke-width: 14; } }
+
+@media all and (max-width: 500px) {
+  .skillsTextItem {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .skillsTextItemTitle,
+  .skillsTextItemList {
+    width: 100%; } }
+
+@media all and (max-width: 400px) {
+  .aboutTitle h2,
+  .skillsTitle h2 {
+    margin-bottom: 2rem; } }
 
 .sectionWork {
   background: rgba(179, 179, 179, 0.9); }
@@ -659,8 +685,10 @@ nav {
       -ms-flex-pack: justify;
           justify-content: space-between; }
   .workTitle h2 {
+    display: block;
     margin-bottom: 2rem; }
   .workTitle p {
+    display: block;
     font-size: 2rem;
     color: #6eb79e;
     margin: 0;
@@ -690,11 +718,24 @@ nav {
 
 .workTitleMain {
   position: relative;
-  padding: 1.4rem 1.8rem;
+  padding: 1.4rem 1.8rem 1.2rem 1.8rem;
   -webkit-box-flex: 2;
   -webkit-flex-grow: 2;
       -ms-flex-positive: 2;
-          flex-grow: 2; }
+          flex-grow: 2;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
 
 .workTitleSkills {
   padding-right: 2.4rem;
@@ -727,6 +768,9 @@ nav {
   .workTitleButton a:focus {
     background: #ffb596; }
 
+.workExtraButton {
+  display: none; }
+
 @media all and (max-width: 900px) {
   .wrapperWork {
     -webkit-flex-wrap: wrap;
@@ -744,7 +788,6 @@ nav {
     -webkit-order: 3;
         -ms-flex-order: 3;
             order: 3; }
-  .wrapperWorkEven .workTitle,
   .wrapperWorkOdd .workTitle {
     -webkit-box-ordinal-group: 3;
     -webkit-order: 2;
@@ -752,15 +795,142 @@ nav {
             order: 2;
     width: 50%; }
   .wrapperWorkEven .workTitle {
-    border-right: none; }
-  .wrapperWorkEven .workText,
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 50%; }
   .wrapperWorkOdd .workText {
     -webkit-box-ordinal-group: 2;
     -webkit-order: 1;
         -ms-flex-order: 1;
             order: 1;
     width: 50%;
-    border-left: none; } }
+    border-left: none; }
+  .wrapperWorkEven .workText {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 50%;
+    border-right: none; } }
+
+@media all and (max-width: 700px) {
+  .workImg {
+    padding: 3rem; } }
+
+@media all and (max-width: 600px) {
+  .wrapperWork {
+    margin-bottom: 0; }
+  .wrapperWorkOdd .workTitle,
+  .wrapperWorkEven .workTitle {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+  .wrapperWorkEven .workTitle {
+    border-right: none; }
+  .wrapperWorkOdd .workTitleMain {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+    border-right: none; }
+  .wrapperWorkOdd .workTitleSub {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+    border-right: 2px solid #ff9163; }
+  .wrapperWorkOdd .workText,
+  .wrapperWorkEven .workText {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 100%;
+    border-right: none;
+    border-top: 2px solid #ff9163; }
+  .workTitleMain {
+    width: 50%;
+    border-right: 2px solid #ff9163;
+    border-bottom: none; }
+  .workTitleSub {
+    width: 50%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .workTitleSub .workTitleSkills {
+      border-bottom: none; }
+  .workTitleButton {
+    display: none; }
+  .workExtraButton {
+    display: block;
+    border: 2px solid #ff9163;
+    border-top: none;
+    margin-bottom: 10rem; }
+    .workExtraButton:last-child {
+      margin-bottom: 0; }
+    .workExtraButton a {
+      display: inline-block;
+      width: 100%;
+      padding: 1.8rem;
+      font-size: 1.6rem;
+      background: #ffc7b0;
+      color: #4c4c4c;
+      text-align: center; }
+    .workExtraButton a:hover,
+    .workExtraButton a:active,
+    .workExtraButton a:focus {
+      background: #ffb596; }
+  #svgWork1 line,
+  #svgWork2 line,
+  #svgWork3 line {
+    stroke-width: 6; } }
+
+@media all and (max-width: 500px) {
+  .wrapperWorkOdd .workTitle,
+  .wrapperWorkEven .workTitle {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .wrapperWorkOdd .workTitleMain,
+  .wrapperWorkEven .workTitleMain {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 100%;
+    border-bottom: 2px solid #ff9163;
+    border-right: none; }
+  .wrapperWorkOdd .workTitleSub,
+  .wrapperWorkEven .workTitleSub {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 100%;
+    border-right: none; }
+  .workImg {
+    padding: 2rem; }
+  #svgWork1 line,
+  #svgWork2 line,
+  #svgWork3 line {
+    stroke-width: 10; } }
 
 .sectionContact {
   background: rgba(230, 230, 230, 0.9); }
@@ -883,6 +1053,42 @@ nav {
         -ms-flex-order: 2;
             order: 2;
     width: 50%; } }
+
+@media all and (max-width: 500px) {
+  .contactTitle {
+    width: 100%;
+    border-right: none; }
+    .contactTitle h2 {
+      margin-bottom: 1rem; }
+  .contactText {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 100%;
+    border-bottom: 2px solid #d0dd41; }
+  .wrapperContactItems {
+    -webkit-box-ordinal-group: 4;
+    -webkit-order: 3;
+        -ms-flex-order: 3;
+            order: 3;
+    width: 100%; }
+  #svgContact line {
+    stroke-width: 14; } }
+
+@media all and (max-width: 450px) {
+  .contactTitle h2 {
+    margin-bottom: 2rem; }
+  #svgContact line {
+    stroke-width: 12; } }
+
+@media all and (max-width: 400px) {
+  .contactTitle h2 {
+    margin-bottom: 2.5rem; } }
+
+@media all and (max-width: 350px) {
+  .contactTitle h2 {
+    margin-bottom: 3rem; } }
 
 footer {
   width: 100%;

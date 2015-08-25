@@ -97,4 +97,53 @@
 	}
 }
 
+@media all and (max-width: 500px) {
+	.contactTitle {
+		width: 100%;
+		border-right: none;
+		h2 {
+			margin-bottom: 1rem;
+		}
+	}
+	.contactText {
+		order: 2;
+		width: 100%;
+		border-bottom: 2px solid $palmas;
+	}
+	.wrapperContactItems {
+		order: 3;
+		width: 100%;
+	}
+	#svgContact line {
+		stroke-width: 14;
+	}
+}
+
+@media all and (max-width: 450px) {
+	.contactTitle {
+		h2 {
+			margin-bottom: 2rem;
+		}
+	}
+	#svgContact line {
+		stroke-width: 12;
+	}
+}
+
+@media all and (max-width: 400px) {
+	.contactTitle {
+		h2 {
+			margin-bottom: 2.5rem;
+		}
+	}
+}
+
+@media all and (max-width: 350px) {
+	.contactTitle {
+		h2 {
+			margin-bottom: 3rem;
+		}
+	}
+}
+
 // end of contact styles
