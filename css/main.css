@@ -299,10 +299,9 @@ nav {
   padding: 2rem 1.3rem 0.6rem 1.3rem;
   background: rgba(255, 255, 255, 0.9);
   border-right: 2px solid #ff9163; }
-
-.navItem a {
-  font-size: 2rem;
-  z-index: 299; }
+  .navItem a {
+    font-size: 2rem;
+    z-index: 299; }
 
 .navHome {
   position: relative;
@@ -533,17 +532,15 @@ nav {
   width: 75%;
   padding: 0 1.8rem;
   border-right: 2px solid #d0dd41; }
-
-.aboutText a {
-  font-size: 1.6rem;
-  color: #6eb79e;
-  text-transform: none;
-  text-decoration: underline; }
-
-.aboutText a:hover,
-.aboutText a:active,
-.aboutText a:focus {
-  color: #489178; }
+  .aboutText a {
+    font-size: 1.6rem;
+    color: #6eb79e;
+    text-transform: none;
+    text-decoration: underline; }
+  .aboutText a:hover,
+  .aboutText a:active,
+  .aboutText a:focus {
+    color: #489178; }
 
 .aboutTitle {
   position: relative;
@@ -888,7 +885,24 @@ nav {
     background: #ffb596; }
 
 .workExtraButton {
-  display: none; }
+  display: none;
+  border: 2px solid #ff9163;
+  border-top: none;
+  margin-bottom: 10rem; }
+  .workExtraButton:last-child {
+    margin-bottom: 0; }
+  .workExtraButton a {
+    display: inline-block;
+    width: 100%;
+    padding: 1.8rem;
+    font-size: 1.6rem;
+    background: #ffc7b0;
+    color: #4c4c4c;
+    text-align: center; }
+  .workExtraButton a:hover,
+  .workExtraButton a:active,
+  .workExtraButton a:focus {
+    background: #ffb596; }
 
 @media all and (max-width: 900px) {
   .wrapperWork {
@@ -913,12 +927,6 @@ nav {
         -ms-flex-order: 2;
             order: 2;
     width: 50%; }
-  .wrapperWorkEven .workTitle {
-    -webkit-box-ordinal-group: 2;
-    -webkit-order: 1;
-        -ms-flex-order: 1;
-            order: 1;
-    width: 50%; }
   .wrapperWorkOdd .workText {
     -webkit-box-ordinal-group: 2;
     -webkit-order: 1;
@@ -926,6 +934,12 @@ nav {
             order: 1;
     width: 50%;
     border-left: none; }
+  .wrapperWorkEven .workTitle {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 50%; }
   .wrapperWorkEven .workText {
     -webkit-box-ordinal-group: 3;
     -webkit-order: 2;
@@ -996,25 +1010,7 @@ nav {
   .workTitleButton {
     display: none; }
   .workExtraButton {
-    display: block;
-    opacity: 0;
-    border: 2px solid #ff9163;
-    border-top: none;
-    margin-bottom: 10rem; }
-    .workExtraButton:last-child {
-      margin-bottom: 0; }
-    .workExtraButton a {
-      display: inline-block;
-      width: 100%;
-      padding: 1.8rem;
-      font-size: 1.6rem;
-      background: #ffc7b0;
-      color: #4c4c4c;
-      text-align: center; }
-    .workExtraButton a:hover,
-    .workExtraButton a:active,
-    .workExtraButton a:focus {
-      background: #ffb596; }
+    display: block; }
   #svgWork1 line,
   #svgWork2 line,
   #svgWork3 line {

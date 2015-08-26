@@ -25,19 +25,17 @@
 	width: 75%;
 	padding: 0 1.8rem;
 	border-right: 2px solid $palmas;
-}
-
-.aboutText a {
-	font-size: 1.6rem;
-	color: $tradewind;
-	text-transform: none;
-	text-decoration: underline;
-}
-
-.aboutText a:hover,
-.aboutText a:active,
-.aboutText a:focus {
-	color: darken($tradewind, 15%);
+	a {
+		font-size: 1.6rem;
+		color: $tradewind;
+		text-transform: none;
+		text-decoration: underline;
+	}
+	a:hover,
+	a:active,
+	a:focus {
+		color: darken($tradewind, 15%);
+	}
 }
 
 .aboutTitle {

@@ -120,10 +120,8 @@
 }
 
 @media all and (max-width: 450px) {
-	.contactTitle {
-		h2 {
-			margin-bottom: 2rem;
-		}
+	.contactTitle h2 {
+		margin-bottom: 2rem;
 	}
 	#svgContact line {
 		stroke-width: 12;
@@ -131,18 +129,14 @@
 }
 
 @media all and (max-width: 400px) {
-	.contactTitle {
-		h2 {
-			margin-bottom: 2.5rem;
-		}
+	.contactTitle h2 {
+		margin-bottom: 2.5rem;
 	}
 }
 
 @media all and (max-width: 350px) {
-	.contactTitle {
-		h2 {
-			margin-bottom: 3rem;
-		}
+	.contactTitle h2 {
+		margin-bottom: 3rem;
 	}
 }
 

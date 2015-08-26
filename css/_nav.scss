@@ -24,11 +24,10 @@ nav {
   	padding: 2rem 1.3rem 0.6rem 1.3rem;
   	background: $white90;
   	border-right: 2px solid $tangerine;
-}
-
-.navItem a {
-	font-size: 2rem;
-	z-index: 299;
+  	a {
+  		font-size: 2rem;
+  		z-index: 299;
+  	}
 }
 
 .navHome {

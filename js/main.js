@@ -112,36 +112,53 @@ myPort.showNav = function() {
 myPort.showDivs = function() {
 	// on scroll do the following
 	$(window).scroll(function() {
-		if ($(window).width() > 600) {
-			// check location of each element
-			$('.hide').each( function(i) {
-				// defining bottom of object
-				// bottom of object = position of top of div + div height
-				var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-				// defining bottom of window
-				// bottom of window = pixels hidden above + height of current window
-				var bottom_of_window = $(window).scrollTop() + $(window).height();
-				// if the object is completely visible in the window, fade it in
-				if ( bottom_of_window > bottom_of_object ) {
-					$(this).animate({'opacity':'1'},300);
-				}
-			});
-		} else {
-			// check location of each element
-			$('.hide').each( function(i) {
-				// defining top of object
-				var top_of_object = $(this).offset().top;
-				// defining bottom of nav + 150px padding
-				var bottom_of_nav = $('#nav').offset().top + $('#nav').outerHeight() + 150;
-				// top of object crosses the threshold
-				if ( top_of_object <= bottom_of_nav ) {
-					$(this).animate({'opacity':'1'},300);
-					$('.workExtraButton').animate({'opacity':'1'},300);
-				}
-			});
-		}
+		// check location of each element
+		$('.hide').each( function(i) {
+			// top of object = position of top of div
+			var bottom_of_object = $(this).offset().top;
+			// bottom of window = pixels hidden above + height of current window - 100px
+			var bottom_of_window = $(window).scrollTop() + $(window).height() - 100;
+			// if the object crosses the threshold, fade it in
+			if ( bottom_of_window > bottom_of_object ) {
+				$(this).animate({'opacity':'1'},300);
+			}
+		});
 	});
 }
+
+
+// myPort.showDivs = function() {
+// 	// on scroll do the following
+// 	$(window).scroll(function() {
+// 		if ($(window).width() > 600) {
+// 			// check location of each element
+// 			$('.hide').each( function(i) {
+// 				// defining bottom of object
+// 				// bottom of object = position of top of div + div height
+// 				var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+// 				// defining bottom of window
+// 				// bottom of window = pixels hidden above + height of current window
+// 				var bottom_of_window = $(window).scrollTop() + $(window).height();
+// 				// if the object is completely visible in the window, fade it in
+// 				if ( bottom_of_window > bottom_of_object ) {
+// 					$(this).animate({'opacity':'1'},300);
+// 				}
+// 			});
+// 		} else {
+// 			// check location of each element
+// 			$('.hide').each( function(i) {
+// 				// defining top of object
+// 				var top_of_object = $(this).offset().top;
+// 				// defining bottom of nav + 250px padding
+// 				var bottom_of_nav = $('#nav').offset().top + $('#nav').outerHeight() + 250;
+// 				// top of object crosses the threshold
+// 				if ( top_of_object <= bottom_of_nav ) {
+// 					$(this).animate({'opacity':'1'},300);
+// 				}
+// 			});
+// 		}
+// 	});
+// }
 
 // define init function
 myPort.init = function() {

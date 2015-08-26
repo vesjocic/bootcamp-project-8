@@ -134,6 +134,26 @@
 
 .workExtraButton {
 	display: none;
+	border: 2px solid $tangerine;
+	border-top: none;
+	margin-bottom: 10rem;
+	&:last-child {
+		margin-bottom: 0;
+	}
+	a {
+		display: inline-block;
+		width: 100%;
+		padding: 1.8rem;
+		font-size: 1.6rem;
+		background: lighten($tangerine, 15%);
+		color: $thunder;
+		text-align: center;
+	}
+	a:hover,
+	a:active,
+	a:focus {
+		background: lighten($tangerine, 10%);
+	}
 }
 
 // media queries
@@ -158,14 +178,14 @@
 		order: 2;
 		width: 50%;
 	}
-	.wrapperWorkEven .workTitle {
-		order: 1;
-		width: 50%;
-	}
 	.wrapperWorkOdd .workText {
 		order: 1;
 		width: 50%;
 		border-left: none;
+	}
+	.wrapperWorkEven .workTitle {
+		order: 1;
+		width: 50%;
 	}
 	.wrapperWorkEven .workText {
 		order: 2;
@@ -226,27 +246,6 @@
 	}
 	.workExtraButton {
 		display: block;
-		opacity: 0;
-		border: 2px solid $tangerine;
-		border-top: none;
-		margin-bottom: 10rem;
-		&:last-child {
-			margin-bottom: 0;
-		}
-		a {
-			display: inline-block;
-			width: 100%;
-			padding: 1.8rem;
-			font-size: 1.6rem;
-			background: lighten($tangerine, 15%);
-			color: $thunder;
-			text-align: center;
-		}
-		a:hover,
-		a:active,
-		a:focus {
-			background: lighten($tangerine, 10%);
-		}
 	}
 	#svgWork1 line,
 	#svgWork2 line,
